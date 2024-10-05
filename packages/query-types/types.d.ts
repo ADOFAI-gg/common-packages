@@ -13,6 +13,7 @@ export type Filter =
 	| OrFilter
 	| InFilter
 	| NotInFilter
+	| EqualFilter
 	| NotEqualFilter
 	| StringContainsFilter
 	| StringStartsWithFilter
