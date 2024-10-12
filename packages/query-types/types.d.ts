@@ -9,7 +9,7 @@ export interface Sort {
 }
 
 export type Filter =
-	| And
+	| AndFilter
 	| OrFilter
 	| InFilter
 	| NotInFilter
@@ -21,7 +21,7 @@ export type Filter =
 
 export type FilterPrimitive = string | number
 
-export interface And {
+export interface AndFilter {
 	op: 'and'
 	data: Filter[]
 }
@@ -65,6 +65,7 @@ export interface StringContainsFilter {
 export interface StringNotContainsFilter {
 	op: 'stringNotContains'
 	key: string
+	value: string
 	ignoreCase?: boolean
 }
 
