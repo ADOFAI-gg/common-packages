@@ -16,6 +16,7 @@ export type Filter =
 	| EqualFilter
 	| NotEqualFilter
 	| StringContainsFilter
+	| StringNotContainsFilter
 	| StringStartsWithFilter
 	| StringEndsWithFilter
 
