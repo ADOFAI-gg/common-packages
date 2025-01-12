@@ -19,6 +19,10 @@ export type Filter =
 	| StringNotContainsFilter
 	| StringStartsWithFilter
 	| StringEndsWithFilter
+	| GreaterThanFilter
+	| LessThanFilter
+	| GreaterThanOrEqualFiter
+	| LessThanOrEqualFilter
 
 export type FilterPrimitive = string | number
 
@@ -82,4 +86,24 @@ export interface StringEndsWithFilter {
 	key: string
 	value: string
 	ignoreCase?: boolean
+}
+
+export interface GreaterThanOrEqualFiter {
+	op: 'gte'
+	value: number
+}
+
+export interface GreaterThanFilter {
+	op: 'gt'
+	value: number
+}
+
+export interface LessThanOrEqualFilter {
+	op: 'lte'
+	value: number
+}
+
+export interface LessThanFilter {
+	op: 'lt'
+	value: number
 }
