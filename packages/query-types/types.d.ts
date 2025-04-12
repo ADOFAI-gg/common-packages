@@ -91,19 +91,23 @@ export interface StringEndsWithFilter {
 export interface GreaterThanOrEqualFiter {
 	op: 'gte'
 	value: number
+	key: string
 }
 
 export interface GreaterThanFilter {
 	op: 'gt'
 	value: number
+	key: string
 }
 
 export interface LessThanOrEqualFilter {
 	op: 'lte'
 	value: number
+	key: string
 }
 
 export interface LessThanFilter {
 	op: 'lt'
 	value: number
+	key: string
 }
