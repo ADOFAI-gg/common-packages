@@ -23,6 +23,8 @@ export type Filter =
 	| LessThanFilter
 	| GreaterThanOrEqualFiter
 	| LessThanOrEqualFilter
+	| ContainsAllFilter
+	| NotContainsAllFilter
 
 export type FilterPrimitive = string | number
 
@@ -110,4 +112,16 @@ export interface LessThanFilter {
 	op: 'lt'
 	value: number
 	key: string
+}
+
+export interface ContainsAllFilter {
+	op: 'containsAll'
+	key: string
+	value: string[]
+}
+
+export interface NotContainsAllFilter {
+	op: 'notContainsAll'
+	key: string
+	value: string[]
 }
