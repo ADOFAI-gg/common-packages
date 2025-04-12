@@ -117,11 +117,11 @@ export interface LessThanFilter {
 export interface ContainsAllFilter {
 	op: 'containsAll'
 	key: string
-	value: string[]
+	values: string[]
 }
 
 export interface NotContainsAllFilter {
 	op: 'notContainsAll'
 	key: string
-	value: string[]
+	values: string[]
 }
